@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mongoose Repository</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Edit an animal in the animal repository!</h1>
+
+<!-- tip to easily see objects printed in full instead of [object Object] -->
+
+<% JSON.stringify(messages) %>
+<!-- based on the structure of your messages, determine how to display them -->
+<% if(messages.registration) { %>
+
+     <% for (var x of messages.registration) { %>
+      <h3><%= x %></h3>
+     <% } %>
+ 
+<% } %>
+
+    <form action="/mongooses/<%= animal[0]._id%>" method="post">
+          Animal: <input type="text" name="animal" value = "<%= animal[0].animal%>"><br>
+          Food: <input type="text" name="food" value = "<%= animal[0].food%>"><br>
+          Personality: <input type="text" name="personality" value = "<%= animal[0].personality%>"><br>
+          Image URL: <input type="text" name="imgurl" value = "<%= animal[0].imgurl%>"><br>
+          <button type="submit">Submit</button><br>
+    </form>
+
+</body>
+</html>

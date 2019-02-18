@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Mongoose App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type ="text/javascript">
+    </script>
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+<h1>The <%= animal[0].animal%></h1>
+
+
+<img src="<%= animal[0].imgurl%>" height ="50%" width = "50%">
+<ul><b>Eats: </b><%= animal[0].food%></ul>
+<ul><b>Personality: </b><%= animal[0].personality%></ul>
+
+<a href = "/mongooses/new">Create a New Mongoose.</a>
+
+<a href = "/mongooses/edit/<%= animal[0]._id%>">Edit this Mongoose.</a>
+
+
+</body>
+</html>
